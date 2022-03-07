@@ -1,0 +1,15 @@
+add t0,t1,t2
+sub t4,s0,s1
+lw t3,8(s0)
+jal a0,L
+xori t0,t1,-1
+sw s0,-4(s1)
+andi t2,t4,-8
+slli t1,t2,10
+jalr a6,a3,96
+srai s5,t3,23
+L: sb t5,44(t2)
+beq s5,t0,L
+bgeu t3,s6,L
+lui t6,73829
+auipc s9,134
